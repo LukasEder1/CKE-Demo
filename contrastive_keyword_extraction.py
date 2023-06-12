@@ -144,7 +144,7 @@ def final_score(documents, changed_indices, new_indices, matched_dict, ranking, 
 
 
 
-def contrastive_extraction(documents, max_ngram, min_ngram=1, 
+def extract_contrastive_keywords(documents, max_ngram, min_ngram=1, 
                            importance_estimator= sentence_importance.text_rank_importance,
                            combinator=utilities.alpha_combination, threshold=0.6, top_k=1, alpha_gamma=0.5, 
                            matching_model='all-MiniLM-L6-v2', 
@@ -179,6 +179,6 @@ def contrastive_extraction(documents, max_ngram, min_ngram=1,
                                         extra_stopwords=extra_stopwords)
     
     
-    return keywords, former_keywords, latter_keywords, matched_dict, changed_indices, additions, deletions, new_indices, ranking, removed, matched_indices, unified_delitions
+    return keywords, former_keywords, latter_keywords
 
 
